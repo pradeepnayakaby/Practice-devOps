@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# chenging dirtry to ssh
+cd .ssh
+
+# genrating key
+ssh-keygen -t rsa -b 2048 
+
+#list the files
+ls
+
+#display the content inside the id_rsa.pub
+cat id_rsa.pub
+
