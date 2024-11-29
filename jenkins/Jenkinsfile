@@ -1,0 +1,8 @@
+pipeline{
+    agent any
+    stages{
+        stage("intro"){
+            sh "hello every one,this is my first pipeline"
+        }
+    } 
+}
