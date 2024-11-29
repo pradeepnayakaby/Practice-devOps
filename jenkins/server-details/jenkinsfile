@@ -1,0 +1,33 @@
+pipeline{
+    agent any
+    stages{
+        stage('server details'){
+            steps{
+                echo"system details-1st stage"
+                uname -a
+            }
+        }
+        stage('memory details'){
+            steps{
+                echo"memory details"
+                free -h
+            }
+        }
+        stage('cpu details'){
+        steps{
+            sh'''
+            echo "cpu details"
+            nproc
+            lscpu
+            ''' }
+        }
+        stages('current date'){
+            steps{
+                echo"printing current date"
+                date
+            }
+
+        }
+        
+    }
+}
