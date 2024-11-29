@@ -3,14 +3,18 @@ pipeline{
     stages{
         stage('server details'){
             steps{
-                echo"system details-1st stage"
-                uname -a
+              sh '''
+              echo "system details-1st stage"
+              uname -a
+              '''
             }
         }
         stage('memory details'){
             steps{
-                echo"memory details"
+                sh '''
+                echo "memory details"
                 free -h
+                '''
             }
         }
         stage('cpu details'){
@@ -21,10 +25,12 @@ pipeline{
             lscpu
             ''' }
         }
-        stages('current date'){
+        stage('current date'){
             steps{
-                echo"printing current date"
+                sh'''
+                echo "printing current date"
                 date
+                '''
             }
 
         }
