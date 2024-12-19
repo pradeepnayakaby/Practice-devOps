@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#for loop
+
+for i in {1..10}
+do
+	echo "hello world"
+
+done
+
+# if statements
+
+if [ 50 -gt 30 ]; then
+    echo "hello"
+else
+    echo "world"
+fi
+
