@@ -11,9 +11,15 @@ else
 	echo "not equal"
 fi
 
-#system defined variable
+
 todaydate=$(date)
 echo $todaydate
+
+
+#system defined variable
+echo $PWD
+echo $BASH
+
 
 
 
