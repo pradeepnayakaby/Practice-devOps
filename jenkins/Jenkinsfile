@@ -5,4 +5,16 @@ pipeline{
             sh "hello every one,this is my first pipeline"
         }
     } 
+        stage("system daetils"){
+            steps{
+                uname
+            }
+        }
+        stage("memory deatils"){
+        steps{
+               lscpu 
+            }    
+        }
+
+    }
 }
