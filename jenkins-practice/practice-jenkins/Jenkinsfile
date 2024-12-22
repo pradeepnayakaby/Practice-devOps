@@ -8,8 +8,8 @@ pipeline{
         }
         stage("build"){
             steps{
-                sh "chmod 777 sample.py"
-                sh "./sample.py"
+                sh 'chmod 777 sample.py'
+                sh './sample.py'
             }
         }
     }
