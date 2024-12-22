@@ -1,20 +1,23 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("intro"){
-            sh "hello every one,this is my first pipeline"
-        }
-    } 
-        stage("system daetils"){
-            steps{
-                uname
+
+    stages {
+        stage("Intro") {
+            steps {
+                sh 'echo "Hello everyone, this is my first pipeline"'
             }
         }
-        stage("memory deatils"){
-            steps{
-               lscpu 
-            }    
+
+        stage("System Details") {
+            steps {
+                sh "uname -a"
+            }
         }
 
+        stage("Memory Details") {
+            steps {
+                sh "lscpu"
+            }
+        }
     }
 }
