@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("git checkout"){
             steps{
-                git branch:jenkins-Practice, url: 'https://github.com/pradeepnayakaby/Practice-devOps.git'
+                git branch:jenkins, url: 'https://github.com/pradeepnayakaby/Practice-devOps.git'
             }
         }
         stage("build"){
