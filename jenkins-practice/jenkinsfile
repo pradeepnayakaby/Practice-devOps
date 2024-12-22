@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    stages{
+        stage("intro"){
+            steps{
+                sh'''
+                echo "system deatils"
+                uname
+                '''
+            }
+        }
+        stage("memory-detils"){
+          staps{
+            sh'''
+            free    
+            '''
+            
+            }
+        }  
+    }
+}
