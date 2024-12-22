@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                git branch:jenkins-Practice, url: 'https://github.com/pradeepnayakaby/Practice-devOps.git'
+            }
+        }
+        stage("build"){
+            steps{
+                sh "chmod 777 sample.py"
+                sh "./sample.py"
+            }
+        }
+    }
+}
