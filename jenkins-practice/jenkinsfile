@@ -10,10 +10,10 @@ pipeline{
             }
         }
         stage("memory-detils"){
-          staps{
-            sh'''
-            free    
-            '''
+            staps{
+               sh'''
+               free    
+               '''
             
             }
         }  
